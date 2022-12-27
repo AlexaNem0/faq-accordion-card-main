@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+:root {
+  --Soft-Red: hsl(14, 88%, 65%);
+  --Soft-Violet: hsl(273, 75%, 66%);
+  --Soft-Blue: hsl(240, 73%, 65%);
+  --Blue-Grey: hsl(237, 12%, 33%);
+  --Dark-Grey-Blue: hsl(240, 6%, 50%);
+  --Light-Blue-Gray: hsl(240, 5%, 91%);
+  --Very-Dark-Blue: hsl(238, 29%, 16%);
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: var(--Soft-Violet);
+  margin: 1.5rem;
+}
+
+.cont {
+  background-color: #fff;
+  width: 980px;
+  height: 500px;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url(./images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: -280px -100px;
+}
+
+.accordion {
+  width: 40%;
+  margin-right: 8rem;
+}
+
+.img-container {
+  background-image: url(./images/illustration-woman-online-desktop.svg);
+  background-repeat: no-repeat;
+  width: 60%;
+  height: 100%;
+  background-position-x: -80px;
+  background-position-y: 70px;
+}
+
+.img-woman-cont img {
+  display: none;
+  position: absolute;
+}
+
+.img-box-cont {
+  position: relative;
+  left: -90px;
+  bottom: -200px;
+}
+
+.header {
+  font-weight: 700;
+  color: var(--Very-Dark-Blue);
+}
+
+.accordion-button:not(.collapsed) {
+  color: black;
+  font-weight: 700;
+}
+.accordion-button:focus {
+  font-weight: 700;
+  color: var(--Very-Dark-Blue);
+}
+
+.accordion-body {
+  color: var(--Dark-Grey-Blue);
+}
+
+@media only screen and (max-width: 600px) {
+  .cont {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 330px;
+    height: 80vh;
+    background-image: url(./images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: 80px -15px;
+    background-size: 55%;
+  }
+  .img-container {
+    background-image: none;
+    position: relative;
+  }
+  .img-box-cont {
+    display: none;
+  }
+  .accordion {
+    width: 80%;
+
+    margin: 10px;
+  }
+  .header {
+    text-align: center;
+  }
+  .img-woman-cont img {
+    display: grid;
+    place-content: center;
+    top: -80px;
+    right: 20px;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+  }
+}
